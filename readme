@@ -1,1 +1,10 @@
-this is my web project
+在已经存在一个git仓库的时候，新加仓库克隆的做法
+首先我们要在仓库里加上ssh的密钥，添加第一个之前要先在project里面执行git init
+之后进行克隆git clone https://github.com/bituo123/web.git
+git add .这个命令是把当前文件下所以文件加到仓库里，
+git  commit -m "提交的说明注释" 发表注释
+git push
+添加第一个git仓库git remote add origin https://github.com/bituo123/web.git
+添加第二个git remote add origin https://github.com/bituo123/web.git
+git push -u origin master同时推送
+添加完第二个之后的push是同时上传的
