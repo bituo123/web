@@ -1,0 +1,110 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+
+h1,
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+// 浏览器都有自己的默认样式，以上部分为清除浏览器默认样式
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 20px / 375 * 320;
+  }
+}
+
+@function px2rem($px) {
+  @return #{$px / 40}rem;
+}
+
+.btn {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+$maxWidth: 768px;
+
+body {
+  max-width: $maxWidth;
+  margin: 0 auto;
+}
+
+.footer {
+  max-width: $maxWidth;
+  height: px2rem(98);
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-top: 1px solid #E1E1E1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 px2rem(92);
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  
+  .item {
+    text-align: center;
+    font-size: px2rem(20);
+    line-height: px2rem(28);
+    color: #666666;
+    padding-bottom: px2rem(7);
+    &-selected {
+      color: #3492FD;
+    }
+    @for $i from 1 to 5 {
+      &:nth-child(#{$i}) .icon {
+        background: url(./images/footer-icon#{$i}.png) no-repeat center / contain;
+      }
+    }
+    &:nth-child(1), &:nth-child(4){
+      .icon {
+        margin-bottom: px2rem(5);
+      }
+    }
+    &:nth-child(2) .icon {
+      margin-bottom: px2rem(2);
+    }
+    &:nth-child(3) .icon {
+      margin-bottom: px2rem(4);
+    }
+    .icon {
+      width: px2rem(48);
+      height: px2rem(48);
+      display: block;
+    }
+  }
+}
