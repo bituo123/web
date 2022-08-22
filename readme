@@ -9,3 +9,5 @@ git push
 添加第二个git remote add origin https://github.com/bituo123/web.git
 git push -u origin master同时推送
 添加完第二个之后的push是同时上传的
+git config --global --unset http.proxy
+git config --global --unset https.proxy
