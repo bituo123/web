@@ -156,3 +156,11 @@ select.appendChild(img);
 insertBefore(newNode, referenceNode)
 dom.style.color = 'xxxx';
 DOM事件
+// 监听Input输入事件
+dom.addEventListener("input", function () {});
+// 监听鼠标放置，移动事件
+dom.addEventListener("mouseover", function () {});
+<div onclick="console.log('xxx')"></div>
+dom.onclick = function () {};
+h1.addEventListener("click", function (e) {})
+click dblclick mouse
