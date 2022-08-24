@@ -163,4 +163,13 @@ dom.addEventListener("mouseover", function () {});
 <div onclick="console.log('xxx')"></div>
 dom.onclick = function () {};
 h1.addEventListener("click", function (e) {})
-click dblclick mouse
+鼠标事件click dblclick mousedown按下任意鼠标按钮 mouseenter移动到 mouseleave离开 mouseover mousemove mouseout mouseup释放鼠标按键
+键盘事件keydown按下，keyup释放
+视图scroll滚动，resize缩放
+load加载资源
+冒泡事件，点击之后会依次执行所有设置过的父类点击事件，阻止冒泡需要添加e.stopPropagation()
+捕获addEventListener('click', function() {}, true);
+委托，目的是通过给父亲的孩子也逐个使用点击，给父类写监听，用判断e.target.nodeName来做条件进行执行特定代码
+表单事件focus焦点，blur失去焦点input只要值改变就触发，change提交触发
+网络fetch(url).then(function (response) {return response.json();}).then(function (myJson) {console.log(myJson);});
+如果是post需要fetch(url,{method: 'POST'})加上方法
