@@ -1,0 +1,21 @@
+nav {
+  height: 52px;
+  overflow: hidden;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.core {
+  width: 1026px;
+  height: 52px;
+  margin: 0 auto;
+  transition: transform 0.3s;
+}
+
+.core img {
+  width: 1026px;
+  height: 52px;
+}
